@@ -1,0 +1,17 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @personas.Nombre %>
+</p>
+ 
+<p>
+  <strong>Email:</strong>
+  <%= @personas.Email %>
+<p>
+  <strong>Telefono:</strong>
+  <%= @personas.Telefono %>
+
+
+</p>
+<%= link_to 'Editar', edit_persona_path(@personas) %> |
+<%= link_to 'Regresar', personas_path %>
+

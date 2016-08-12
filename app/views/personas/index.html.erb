@@ -1,0 +1,20 @@
+
+<h1>Personas registradas</h1>
+<%= link_to 'Nuevo registro', new_persona_path %>  <br>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @personas.each do |personas| %>
+    <tr>
+      <td><%= personas.Nombre %></td>
+      <td><%= link_to 'Mostrar', persona_path(personas) %></td>
+      <td><%= link_to 'Editar', edit_persona_path(personas) %></td>     
+      <td><%= link_to 'Eliminar', persona_path(personas),
+              method: :delete,
+              data: { confirm: 'Está seguro?' } %></td>
+    </tr>
+  <% end %>
+</table>
